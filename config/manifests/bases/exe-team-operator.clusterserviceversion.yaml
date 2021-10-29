@@ -1,0 +1,55 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: exe-team-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Memcached is the Schema for the memcacheds API
+      displayName: Memcached
+      kind: Memcached
+      name: memcacheds.cache.opdev.io
+      version: v1alpha1
+  description: Operator used by Ecosystem Experience Engineering for various testing
+    use cases.
+  displayName: exe-team-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - demo
+  - sample
+  - exe
+  - certification
+  - pipeline
+  - testing
+  - qa
+  links:
+  - name: Exe Team Operator
+    url: https://exe-team-operator.domain
+  maintainers:
+  - email: mhillsma@redhat.com'
+    name: '''Melvin Hillsman'
+  maturity: alpha
+  provider:
+    name: Ecosystem Experience Engineering
+    url: https://redhat.com
+  version: 0.0.0
